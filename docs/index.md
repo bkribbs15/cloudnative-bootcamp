@@ -45,4 +45,4 @@ This Cloud Native Bootcamp has been created to teach and guide IBMers, Business 
 
 ## How to approach the Bootcamp
 
-This bootcamp has been designed with a 
+This bootcamp has been designed to give the students a better hands-on experience than just copy/paste.  The bootcamp uses the approach of "Read, listen, watch, try it out". We want students to take what they have heard and use their resources to solve the labs on their own without much instruction.
