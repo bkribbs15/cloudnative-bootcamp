@@ -74,7 +74,7 @@ nav:
           - labs/index.md
           - Containers Lab: labs/containers/index.md
           - Image Registries Lab: labs/containers/container-registry/index.md
-  - <div class="header">Kubernetes/OpenShift</div>:
+  - Kubernetes/OpenShift:
       - openshift/index.md
       - Container Orchestration Concepts: openshift/orchestrationConcepts.md
       - <div class="header">OpenShift Objects</div>:
