@@ -1,0 +1,132 @@
+site_name: Cloud Native Bootcamp
+repo_url: https://github.com/ibm-cloud-architecture/cloud-native-bootcamp
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.tabs.link
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.share
+  icon:
+    repo: fontawesome/brands/github
+  logo: images/watson-white-logo.png
+  favicon: images/watson-white-logo.png
+  font:
+    text: IBM Plex Sans Light
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      strict: false
+
+extra_css:
+  - stylesheets/index.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+
+nav:
+  - Home:
+      - index.md
+      - Course Agenda: agenda.md
+      - Prerequisites: prerequisites.md
+      - Cloud Native Challenge: cloudnative-challenge.md
+  - Cloud:
+      - cloud/index.md
+      - Cloud Concepts: cloud/cn-concepts.md
+      - Benefits of Cloud: cloud/benefits.md
+      - Cloud Applications: cloud/cn-apps.md
+  - Containers:
+      - containers/index.md
+      - Benefits of Container: containers/benefitsContainers.md
+      - Image Registries: containers/imageregistry.md
+      - References: containers/reference.md
+      - Activities/Labs:
+          - labs/index.md
+          - Containers Lab: labs/containers/index.md
+          - Image Registries Lab: labs/containers/container-registry/index.md
+  - <div class="header">Kubernetes/OpenShift</div>:
+      - openshift/index.md
+      - Container Orchestration Concepts: openshift/orchestrationConcepts.md
+      - <div class="header">OpenShift Objects</div>:
+          - <div class="sub-section">API Primatives</div>: openshift/core-concepts/index.md
+          - <div class="sub-section">Namespaces/Projects</div>: openshift/core-concepts/namespaces-projects/index.md
+          - <div class="sub-section">Security Contexts</div>: openshift/configuration/security-contexts/index.md
+          - <div class="sub-section">Service Accounts</div>: openshift/configuration/service-accounts/index.md
+      - <div class="header">Pods</div>:
+          - Pod Basics: openshift/pods/index.md
+          - <div class="sub-section">Lab 1 - Pod Creation</div>: labs/kubernetes/lab1/index.md
+          - Labels-Selectors: openshift/pods/tagging/index.md
+          - Health and Monitoring: openshift/pods/health-checks/index.md
+          - <div class="sub-section">Lab 2 - Probes</div>: labs/kubernetes/lab2/index.md
+          - Troubleshooting: openshift/pods/troubleshooting/index.md
+          - <div class="sub-section">Lab 3 - Debugging</div>: labs/kubernetes/lab3/index.md
+          - Multi-Container: openshift/pods/multi-container/index.md
+          - <div class="sub-section">Lab 4 - Multi-Container</div>: labs/kubernetes/lab4/index.md
+      - <div class="header">Storage/State Persistence</div>:
+          - openshift/state-persistence/index.md
+          - <div class="sub-section">Volumes</div>: openshift/state-persistence/volumes.md
+          - <div class="sub-section">Persistent Volumes & Claims</div>: openshift/state-persistence/pv-pvc.md
+          - <div class="sub-section">Lab 5 - Persistent Volumes</div>: labs/kubernetes/lab5/index.md
+      - <div class="header">Configuration</div>:
+          - openshift/configuration/index.md
+          - <div class="sub-section">Config Maps</div>: openshift/configuration/config-map/index.md
+          - <div class="sub-section">Secrets</div>: openshift/configuration/secrets/index.md
+          - <div class="sub-section">Resource Limiting</div>: openshift/configuration/limit-ranges/index.md
+          - <div class="sub-section">Lab 6 - Pod Configuration</div>: labs/kubernetes/lab6/index.md
+      - <div class="header">Deployments</div>:
+          - Deployments: openshift/deployments/index.md
+          - <div class="sub-section">Rolling Updates</div>: openshift/deployments/updates/index.md
+          - <div class="sub-section">Lab 7 - Rolling Updates</div>: labs/kubernetes/lab7/index.md
+          - <div class="sub-section">Jobs and CronJobs</div>: openshift/pods/jobs/index.md
+          - <div class="sub-section">Lab 8 - Cron Jobs</div>: labs/kubernetes/lab8/index.md
+      - <div class="header">Networking</div>:
+          - openshift/services-networking/index.md
+          - <div class="sub-section">Services</div>: openshift/services-networking/services.md
+          - <div class="sub-section">Lab 9 - Services</div>: labs/kubernetes/lab9/index.md
+          - <div class="sub-section">Routes</div>: openshift/services-networking/routes.md
+          - <div class="sub-section">Ingresses</div>: openshift/services-networking/ingress.md
+          - <div class="sub-section">Lab 10 - Network Policies</div>: labs/kubernetes/lab10/index.md
+      - <div class="header">Operators</div>:
+          - openshift/operators/index.md
+          - Operator Catalog: openshift/operators/operatorCatalog.md
+          - How to use Operators: openshift/operators/operatorUsage.md
+  - DevOps/GitOps:
+      - devops/index.md
+      - DevOps Tools: devops/devopsTools.md
+      - <div class="sub-section">Tekton</div>: devops/tekton/index.md
+      - <div class="sub-section">IBM ToolChain</div>: devops/ibm-toolchain/index.md
+      - What is GitOps?: devops/gitops.md
+      - <div class="sub-section">ArgoCD</div>: devops/argocd/index.md
+  - Activities/Labs:
+      - labs/index.md
+      - Solutions: labs/kubernetes/lab-solutions.md
